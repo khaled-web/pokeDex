@@ -1,0 +1,185 @@
+/* font style */
+ @import url('https://fonts.googleapis.com/css?family=Lato:wght@300;400&display=swap');
+
+/* General style */
+:root{
+ --clr-white01:#F6FBF4; 
+ --clr-white02: #fff;
+ --clr-white03: #ffffff;
+ --clr-white04: #eee;
+ --clr-grey01: #ecf0f1;
+ --clr-grey02: #777;
+ --clr-grey03: #aaa;
+ --clr-red01:#F47C7C;
+ --clr-black01: #2C3333;
+ --clr-black02: #111;
+ --clr-black03:#1d1d1d;
+ --clr-black04:#000;
+ --clr-blue01: #3b3b98;
+ --clr-blue02: #23235b;
+ --clr-blue03:#7bdaf3;
+ --clr-blue04: #3498db;
+ --clr-yellow01: #efefbb;
+ --clr-purple01: #8344ad; 
+ --clr-green01:#9ec862;
+ --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body{
+  background: var(--clr-yellow01);
+  background: linear-gradient(to right, #d4d3dd, #efefbb);
+  font-family: 'Lato', 'sans-serif';
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  margin: 0; 
+}
+
+/* Animation */
+
+/* slideON */
+@keyframes slideOn{
+  0%{
+    transform: translateX(0) scale(1);
+  }
+
+  50%{
+    transform: translateX(20x) scale(1.2);
+  }
+
+  100%{
+    transform: translateX(40px) scale(1);
+  }
+}
+/* slideOff */
+@keyframes slideOff{
+  0%{
+    transform: translateX(40px) scale(1);
+  }
+
+  50%{
+    transform: translateX(20x) scale(1.2);
+  }
+
+  100%{
+    transform: translateX(0) scale(1);
+  }
+}
+/* hide */
+@keyframes hide{
+  0%{
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100%{
+    transform: translate(-50%, -50%) scale(0);
+
+  }
+}
+
+/* show */
+@keyframes show{
+  0%{
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  30%{
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+
+  100%{
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* goIn */
+@keyframes goIn {
+  0%{
+    transform: translate(-50%, -50%) rotate(120deg);
+  }
+
+  30%{
+    transform: translate(-50%, -50%) rotate(-20deg);
+
+  }
+
+  60%{
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+
+  100%{
+    transform: translate(-50%, -50%) rotate(0deg);
+
+  }
+}
+
+/* goOut */
+
+@keyframes goOut {
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  60%{
+    transform: translate(-50%, -50%) rotate(20deg);
+  }
+
+  100%{
+    transform: translate(-50%, -50%) rotate(-120deg);
+  }
+}
+
+/* special Style */
+h1{
+  letter-spacing: 3px;
+}
+
+.poke-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.pokemon{
+  background: var(--clr-white04);
+  border-radius: 10px;
+  box-shadow: var(--dark-shadow);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.pokemon .img-container{
+  background-color: rgba(255,255,255,.6);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+}
+
+.pokemon .img-container img{
+  max-width: 80%;
+  margin-top: 20px;
+}
+
+.pokemon .info{
+  margin-top: 20px;
+}
+
+.pokemon .info .number{
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: .8em;
+}
+
+.pokemon .info .name{
+  margin: 15px 0 7px;
+  letter-spacing: 1px;
+}
+
